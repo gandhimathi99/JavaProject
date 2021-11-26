@@ -1,0 +1,55 @@
+kubernetes
+1. application- crash -> not proper
+1.out of memory exception -kubectl logs pod_name
+kubectl describe pod , memory leak, java run time exception, testing pod deaf.xml 
+run cmd - start.sh out of memory exception-> deploy.yml-> resources limit-> CPU -300 MB -> 1GB ->load > down -> replica sets -> minimum -2
+auto scale up traffic- auto scaling available
+patching time, reboot configuration -linux start default 
+deployment - crash loop back off - deplo.yml-pull tag namr,url not defined properly.
+
+Resurnant based project -grenn and blue deployment -> canary deployment -> change roll out->deploy->5 per chnage pannalaam
+active and passive traffic faiover -> we have only active -> changes rollout -> impact -> testing 5% transcation only we have to test
+ratio basics-> deployment.yml one master three worked node -> spec: node selector -> any one to deploymnet 
+. SNS 1 0r 2 
+kubectl controller (any one of the worker nodes
+
+worker nodde- down -auto scale up - vertical -down - recrreate -> worker node down- pod 1 or pod2 
+
+splunk > L1-cloud watch-
+create alarm -metrics set,AMI value,monitor by ec2 
+10 ec2 monitoring setup -> CPU -> GO with AMI, ec2 instance ststus, health check , system check, 
+alert mail configuration
+SNS topic-> ARN-ticketing tool-
+in P1 and P2 -high -procudure 
+in alarm, ok, in-suffiecnt-80% alarm-> 5 minstues 
+data points - 5 
+
+1. souce,build,testing, sonar vulnaribilty check and quality gate check, docke image convert, 
+
+ifnotpresent
+You need multi-master setups for high-availability. 
+And then build redundancies at application and infra-level for good measure.
+You must plan zero-downtime environment upgrades. 
+You must also be patching applications and upgrading Kubernetes to its latest version, while carefully maintaining compatibility between the components and k8s.
+You must set up a CI/CD toolchain that not only expedites releases, 
+but also ensures their quality, without additional efforts from your DevOps teams.
+monitor infra elements like CPU, RAM etc. as well as abstractions like pods, replica sets etc.
+
+check Pod description output i.e. kubectl describe pod abcxxx
+2. check the events generated related to the Pod i.e. kubectl get events| grep abcxxx
+3. Check if End-points have been created for the Pod i.e. kubectl get ep
+4. Check if dependent resources have been in-place e.g. CRDs or configmaps or any other resource that may be required.
+
+
+…or create a new repository on the command line
+echo "# Devops_documents" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/gandhimathi99/Devops_documents.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/gandhimathi99/Devops_documents.git
+git branch -M main
+git push -u origin main
